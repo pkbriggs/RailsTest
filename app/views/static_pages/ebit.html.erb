@@ -1,0 +1,116 @@
+
+  <head>
+    <meta charset="utf-8">
+    <title>eBit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles  -->
+    <%= stylesheet_link_tag "stylesheets/bootstrap" %>
+    <%= stylesheet_link_tag "stylesheets/bootstrap-responsive" %>
+    <%= stylesheet_link_tag "stylesheets/style" %>
+  </head>
+
+  <body>
+    <div class="container-narrow">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="row-fluid">
+            <h3 class="muted span2">eBit</h3>
+           <div class="span2" id="searchspace">
+           </div>
+        </div>
+      </div>
+
+      <div id="hrule"><hr></div>
+
+      <script src="jquery-1.9.1.min.js"></script>
+      <script src="ebaysearch.js"></script>
+      <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+
+      <div class="jumbotron">
+        <h1 id="logo">eBit</h1>
+        <p class="lead" id="sublogo">Private Shopping on eBay</p>
+
+        <form class="navbar-search" id="search" action='javascript:handleSearch(event)'>
+          <input type="text" id="searchtext" class="search-query" placeholder="Search eBay" autofocus>
+        </form>
+      </div>
+
+      <div id="bestsellers" class="well">
+        <center><h4>What's Hot</h4></center>
+        <table class="table table-striped" id="whatshot">
+          <tr>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Cards Against Humanity</p>
+              <img src="cards.jpg">
+            </a></td>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Kindle Fire</p>
+              <img src="kindle.jpg">
+            </a></td>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>GoPro</p>
+              <img src="gopro.jpg">
+            </a></td>
+          </tr>
+          <tr>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Levi's</p>
+              <img src="levis.jpg">
+            </a></td>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Horse Head Mask</p>
+              <img src="horse.jpg">
+            </a></td>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Galaxy Tab 2</p>
+              <img src="galaxy.jpg">
+            </a></td>
+          </tr>
+          <tr>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Apple TV</p>
+              <img src="appletv.jpg">
+            </a></td>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>The Hobbit</p>
+              <img src="hobbit.jpg">
+            </a></td>
+            <td><a href="#" onclick="javascript:handleSearch(event)">
+              <p>Fifty Shades of Grey</p>
+              <img src="fiftyshades.jpg">
+            </a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!--<script>scrapeBestSellers();</script>-->
+
+      <div id="results"></div>
+
+      <hr>
+
+      <div class="pagination" id='pagination'>
+        <center><ul></ul></center>
+      </div>
+
+
+      <div class="footer">
+        <p>&copy; Rials + Briggs 2013</p>
+      </div>
+
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= stylesheet_link_tag "stylesheets/bootstrap" %>
+
+  </body>
+
